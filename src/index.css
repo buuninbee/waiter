@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+:root{
+    --primario-50: #e6f0ee;
+    --primario-100: #b0d0cb;
+    --primario-200: #8abab1;
+    --primario-300: #549a8e;
+    --primario-400: #338678;
+    --primario-500: #006856;
+    --primario-600: #005f4e;
+    --primario-700: #004a3d;
+    --primario-800: #00392f;
+    --primario-900: #002c24;
+
+    --secundario-50: #f7eae6;
+    --secundario-100: #e7bfb0;
+    --secundario-200: #db9f8a;
+    --secundario-300: #ca7454;
+    --secundario-400: #c05933;
+    --secundario-500: #b02f00;
+    --secundario-600: #a02b00;
+    --secundario-700: #7d2100;
+    --secundario-800: #611a00;
+    --secundario-900: #4a1400;
+
+    --terciario-50: #fffffd;
+    --terciario-100: #fffef7;
+    --terciario-200: #fffdf4;
+    --terciario-300: #fffcee;
+    --terciario-400: #fffceb;
+    --terciario-500: #fffbe6;
+    --terciario-600: #e8e4d1;
+    --terciario-700: #b5b2a3;
+    --terciario-800: #8c8a7f;
+    --terciario-900: #6b6961;
+}
+
+body{
+    background-color: var(--terciario-50);
+    color: #002c24;
+}
