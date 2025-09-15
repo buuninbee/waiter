@@ -1,4 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap');
+
 @import "tailwindcss";
+
 
 :root{
     --primario-50: #e6f0ee;
@@ -33,9 +36,11 @@
     --terciario-700: #b5b2a3;
     --terciario-800: #8c8a7f;
     --terciario-900: #6b6961;
+
+    --font-sans: "Roboto Mono", monospace;
+    --font-serif: "Roboto", Georgia, 'Times New Roman';
 }
 
 body{
-    background-color: var(--terciario-50);
-    color: #002c24;
+    background-color: var(--terciario-400);
 }

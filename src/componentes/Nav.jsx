@@ -1,17 +1,21 @@
-import Logo from "../assets/Waiter.svg"
+import Logo from "../assets/waiter.svg"
+import Menufechado from "../assets/menu-fechado.svg"
 import "../index.css"
+import React from "react"
 
 const Nav = () => {
+
+  const [aberto, setAberto] = React.useState(false)
   return (
-    <header className="header">
+    <header className="bg-[var(--primario-700)] px-8 py-7 flex justify-between">
     <nav className="">
       <div className="">
-        <a href={Logo}>
-          <img src="./assets/logo-waiter.svg" alt="logo waiter"/>
+        <a href="">
+          <img src={Logo} alt="logo waiter"/>
         </a>
       </div>
 
-      <div className="">
+      <div className="hidden">
         <ul className="">
           <li className=""><a href="">Home</a></li>
           <li className=""><a href="">Qr-code</a></li>
@@ -26,18 +30,18 @@ const Nav = () => {
 
     <div className="">
       <div>
-        <button className="">
-          <img className="w-6" src="./assets/menu-fechado.svg" alt="fechar menu"/>
+        <button className={aberto ? "bg-amber-200" : aberto} onClick={() => setAberto(!aberto)} >
+          <img className="w-6" src={Menufechado} alt="fechar menu"/>
         </button>
       </div>
 
-      <ul className="">
+      <ul className="hidden">
         <li className=""><a href="">Home</a></li>
         <li className=""><a href="">Qr-code</a></li>
         <li className=""><a href="">Cardápio web</a></li>
       </ul>
     </div>
-  </header>
+    </header>
   )
 }
 
