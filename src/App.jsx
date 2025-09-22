@@ -20,25 +20,22 @@ import cifrao from "./assets/cifrao-icon.svg"
 import Footer from './componentes/Footer'
 
 
-
-
 function App() {
-
   return (
     <>
     <Nav/>
     <main className='grid justify-center pb-8'>
-      <section className='px-8 py-5 pb-6'>
+      <section className='px-8 py-5 pb-6 md:py-7'>
         <div className='grid text-center text-[var(--primario-700)] gap-3.5'>
-          <h1 className='text-xl font-medium '>Transforme a experiência dos seus clientes com a digitalização do seu restaurante!</h1>
-          <p className='text-sm'>Ganhe tempo, corte despesas, aumente suas vendas e ofereça uma experiência superior aos seus clientes com cardápios digitais e análises exclusivas.</p>
+          <h1 className='text-xl font-medium sm:text-2xl  md:text-3xl'>Transforme a experiência dos seus clientes com a digitalização do seu restaurante!</h1>
+          <p className='text-sm sm:text-lg'>Ganhe tempo, corte despesas, aumente suas vendas e ofereça uma experiência superior aos seus clientes com cardápios digitais e análises exclusivas.</p>
         </div>
       </section>
 
       <section className='px-8 py-5'>
-        <h2 className='text-xl text-[var(--secundario-500)] text-center font-semibold pb-6'>Problemas comuns que pode estar enfrentando</h2>
+        <h2 className='text-xl text-[var(--secundario-500)] text-center font-semibold pb-6 sm:text-2xl md:text-3xl'>Problemas comuns que pode estar enfrentando</h2>
 
-        <div className='grid gap-3 font-serif text-xl pb-10'>
+        <div className='grid gap-3 font-serif text-xl pb-10 sm:grid-cols-2 md:text-2xl md:gap-5'>
           <div className='bg-[var(--secundario-500)] text-[var(--terciario-50)] grid gap-2.5 px-3 py-6 rounded-md'>
             <img className='w-12' src={emojiChorando} alt="" />
             <p>É difícil saber quais pratos são mais populares para planejar promoções?</p>
@@ -62,9 +59,9 @@ function App() {
       </section>
 
       <section className='px-8 py-5'>
-        <h2 className='text-xl text-[var(--primario-700)] text-center font-semibold pb-6'>Sabemos o que você enfrenta e estamos prontos para te apoiar</h2>
+        <h2 className='text-xl text-[var(--primario-700)] text-center font-semibold pb-6 sm:text-2xl md:text-3xl'>Sabemos o que você enfrenta e estamos prontos para te apoiar</h2>
 
-        <div className='grid gap-3 font-serif text-xl pb-10'>
+        <div className='grid gap-3 font-serif text-xl pb-10 sm:grid-cols-2 md:text-2xl md:gap-5'>
           <div className='bg-[var(--primario-700)] text-[var(--terciario-50)] grid gap-2.5 px-3 py-6 rounded-md'>
             <img className='w-12' src={emojiRostoMaravilhado} alt="" />
             <p>Centralize todos os pedidos no seu WhatsApp ou painel de gestão</p>
@@ -88,45 +85,45 @@ function App() {
       </section>
 
       <section className='px-8 py-5'>
-      <h2 className='text-xl text-[var(--primario-700)] text-center font-semibold pb-6 sm:text-2xl'>O melhor para seu restaurante, tudo em um só lugar!</h2>
+        <h2 className='text-xl text-[var(--primario-700)] text-center font-semibold pb-6 sm:text-2xl md:text-3xl'>O melhor para seu restaurante, tudo em um só lugar!</h2>
 
-      <div className='grid gap-7'>
-        <div className='bg-[var(--terciario-50)] px-4 py-3 rounded-lg grid gap-2'>
-          <div className='block m-0'>
-            <img className='w-full' src={fotoCardapio} alt="" />
+        <div className='grid gap-7 md:grid-cols-2 md:pb-10'>
+          <div className='bg-[var(--terciario-50)] px-4 py-3 rounded-lg grid gap-2'>
+            <div className='block m-0'>
+              <img className='w-full' src={fotoCardapio} alt="" />
+            </div>
+            <h3 className='text-xl font-sans font-medium text-[var(--primario-800)] sm:text-2xl'>Cardápio digital sempre atualizado</h3>
+            <p className='text-[var(--primario-800)] font-serif text-lg sm:text-xl'>Menu interativo para o cliente visualizar e pedir  diretamente do celular</p>
+            <div className='flex gap-2.5 hover:gap-5 hover:transition duration-300 ease-initial max-w-max'>
+              <span className='font-sans font-medium text-[var(--secundario-800)] transition duration-700 ease-in-out sm:text-xl'>Ver Mais</span>
+              <img src={seta} alt="seta" />
+            </div>
           </div>
-          <h3 className='text-xl font-sans font-medium text-[var(--primario-800)] sm:text-2xl'>Cardápio digital sempre atualizado</h3>
-          <p className='text-[var(--primario-800)] font-serif text-lg sm:text-xl'>Menu interativo para o cliente visualizar e pedir  diretamente do celular</p>
-          <div className='flex gap-2.5 hover:gap-5 hover:transition duration-300 ease-initial max-w-max'>
-            <span className='font-sans font-medium text-[var(--secundario-800)] transition duration-700 ease-in-out sm:text-xl'>Ver Mais</span>
-            <img src={seta} alt="seta" />
+          
+          <div className='bg-[var(--terciario-50)] px-4 py-3 rounded-lg grid gap-2'>
+            <div className='block m-0'>
+              <img className='w-full md:py-10' src={graficos} alt="" />
+            </div>
+            <h3 className='text-xl font-sans font-medium text-[var(--primario-800)] sm:text-2xl'>Entenda o que seus clientes ama</h3>
+            <p className='text-[var(--primario-800)] font-serif text-lg sm:text-xl'>Descubra quais pratos são mais visualizados e tome decisões estratégicas com base em dados reais.</p>
+            <div className='flex gap-2.5 hover:gap-5 hover:transition duration-300 ease-initial max-w-max'>
+              <span className='font-sans font-medium text-[var(--secundario-800)] transition duration-700 ease-in-out sm:text-xl'>Ver Mais</span>
+              <img src={seta} alt="seta" />
+            </div>
           </div>
         </div>
-
-        <div className='bg-[var(--terciario-50)] px-4 py-3 rounded-lg grid gap-2'>
-          <div className='block m-0'>
-            <img className='w-full' src={graficos} alt="" />
-          </div>
-          <h3 className='text-xl font-sans font-medium text-[var(--primario-800)] sm:text-2xl'>Entenda o que seus clientes ama</h3>
-          <p className='text-[var(--primario-800)] font-serif text-lg sm:text-xl'>Descubra quais pratos são mais visualizados e tome decisões estratégicas com base em dados reais.</p>
-          <div className='flex gap-2.5 hover:gap-5 hover:transition duration-300 ease-initial max-w-max'>
-            <span className='font-sans font-medium text-[var(--secundario-800)] transition duration-700 ease-in-out sm:text-xl'>Ver Mais</span>
-            <img src={seta} alt="seta" />
-          </div>
-        </div>
-      </div>
       </section>
 
       <section className='bg-[var(--primario-900)] px-8 py-8 rounded-xl'> 
         <div className='grid gap-6'>
-          <h2 className='text-[var(--primario-50)] text-2xl text-center' >Com o nosso cardápio digital e o nosso sistema você pode...</h2>
-           <div className='grid gap-5'>
-            <div className='bg-[var(--primario-700)] text-[var(--primario-50)] py-4 px-3.5 grid gap-3 rounded-3xl'>
+          <h2 className='text-[var(--primario-50)] text-2xl text-center md:text-3xl' >Com o nosso cardápio digital e o nosso sistema você pode...</h2>
+           <div className='grid gap-5 md:grid-cols-2 text-[var(--primario-50)] md:text-xl '>
+            <div className='bg-[var(--primario-700)] py-4 px-3.5 grid gap-3 rounded-3xl'>
               <img src={rostoSorrinto} alt="rosto contente" />
               <p className=''>Conecte-se com seus clientes de forma interativa</p>
             </div>
 
-            <div className='bg-[var(--primario-700)] text-[var(--primario-50)] py-4 px-3.5 grid gap-3 rounded-3xl'>
+            <div className='bg-[var(--primario-700)] py-4 px-3.5 grid gap-3 rounded-3xl'>
               <img src={cifrao} alt="cifrao" />
               <p className=''>Automatize processos para agilizar e organizar o seu serviço</p>
             </div>
