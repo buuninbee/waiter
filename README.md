@@ -1,12 +1,34 @@
-# React + Vite
+# Waiter
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Technologies used
 
-Currently, two official plugins are available:
+- [React](https://reactjs.org/) single page application
+- Routing done using [React Router](https://reacttraining.com/react-router/web/guides/philosophy)
+- [Tailwindcss] (https://tailwindcss.com/)
+- [Pnpm] (https://pnpm.io/)
+- 
+- 
+- ... \[other technologies\]
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Architecture diagrams
 
-## Expanding the ESLint configuration
+... \[add diagrams here\]
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Setup
+
+1. Clone the repository and install the dependencies
+```bash
+pnpm install
+```
+2. Start the frontend application locally
+```bash
+pnpm dev
+```
+3. ... \[add other steps here\]
+
+## Available commands
+
+* `pnpm start`: Start the app locally in your development environment, by default it will be in http://localhost:3000.
+* `pnpm test`: Run tests using watch mode.
+* `pnpm lint`: Run linter.
+* ... \[add other commands here\]
