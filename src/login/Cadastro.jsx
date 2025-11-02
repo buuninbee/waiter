@@ -8,10 +8,10 @@ import {
 } from "@/components/ui/field"
 import { Input } from "@/components/ui/input"
 
-const Login = () => {
+const Cadastro = () => {
   return (
-    <main className="grid justify-center align-middle h-[700px]">
-        <section className="self-center  max-w-[700px]  px-8 py-6 md:py-7 lg:pt-11">
+    <main className="grid justify-center align-middle">
+        <section className="max-w-[700px] px-8 py-6 md:py-7  lg:my-12 ">
             <h1 className='text-xl text-(--primario-700) text-center font-medium pb-7 sm:text-2xl md:text-3xl lg:text-4xl'>Chegou o momento de evoluir, e nós vamos com você.</h1>
 
             <div className="grid bg-(--primario-800) text-(--primario-50) px-3 py-4 rounded-lg">
@@ -20,6 +20,10 @@ const Login = () => {
                 <Field>
                     <FieldLabel htmlFor="nome">Nome</FieldLabel>
                     <Input className="text-(--primario-900)" id="nome" type="nome" placeholder="Francisco paulo alves" />
+                </Field>
+                <Field>
+                    <FieldLabel htmlFor="celular">Celular</FieldLabel>
+                    <Input className="text-(--primario-900)" id="celular" type="celular" placeholder="(XX) XXXXXXXXX" />
                 </Field>
                 <Field>
                     <FieldLabel htmlFor="email">E-mail</FieldLabel>
@@ -40,4 +44,4 @@ const Login = () => {
   )
 }
 
-export default Login
+export default Cadastro
