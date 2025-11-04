@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Botao from "../componentes/Botao";
+import Botao from "../../componentes/Botao";
 import {
   Field,
   FieldGroup,

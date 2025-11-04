@@ -2,7 +2,7 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import QrcodeIcon from '../assets/qrCode-icon.svg'
 
-const cardapioDigital = () => {
+const CardapioDigital = () =>{
   return (
     <main>
         <section className='px-8 py-6  md:py-7 lg:pt-11'>
@@ -127,4 +127,4 @@ const cardapioDigital = () => {
   )
 }
 
-export default cardapioDigital
+export default CardapioDigital

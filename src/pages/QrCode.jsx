@@ -6,7 +6,7 @@ import ideaQrcode from "../assets/idea-qrcode.svg"
 import prato from "../assets/prato-qrcode.svg"
 
 
-const qrCode = () => {
+const QrCode = () => {
   return (
     <main>
       <section className='px-8 py-6 justify-self-center max-w-[1200px] md:py-7 lg:pt-11'>
@@ -71,4 +71,4 @@ const qrCode = () => {
   )
 }
 
-export default qrCode
+export default QrCode
