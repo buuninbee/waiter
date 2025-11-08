@@ -3,7 +3,7 @@ import Logo from "../../assets/waiter.svg"
 import {  NavLink } from "react-router-dom"
 
 
-const LayoutForm = () => {
+const LayoutAdm = () => {
   return (
     <>
        <header className="bg-(--primario-700) h-auto rounded-bl-4xl w-full px-8 py-7 flex mb-6">
@@ -24,4 +24,4 @@ const LayoutForm = () => {
   )
 }
 
-export default LayoutForm
+export default LayoutAdm

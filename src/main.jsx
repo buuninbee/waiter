@@ -12,6 +12,7 @@ import Home from './pages/Home.jsx'
 
 import LayoutForm from './pages/login/LayoutForm.jsx'
 import Pedidos from './pages/adm/Pedidos'
+import LayoutAdm from './pages/adm/LayoutAdm'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -28,7 +29,7 @@ createRoot(document.getElementById('root')).render(
             <Route path='/cadastro' element={<Cadastro/>}/>
           </Route>
 
-        <Route element={<Pedidos/>}>
+        <Route element={<LayoutAdm/>}>
           <Route path='/adm/pedidos' element={<Pedidos/>}/>
         </Route>
         </Routes>
