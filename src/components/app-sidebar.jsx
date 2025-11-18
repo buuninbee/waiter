@@ -50,7 +50,7 @@ const data = {
           url: "#",
         },
         {
-          title: "Relatorios",
+          title: "Cardápio",
           url: "#",
         },
         {
@@ -74,6 +74,21 @@ const data = {
         },
         {
           title: "Dashbord",
+          url: "#",
+        },
+      ],
+    },
+    {
+      title: "Pedidos",
+      url: "#",
+      icon: BookOpen,
+      items: [
+        {
+          title: "Novo pedido",
+          url: "#",
+        },
+        {
+          title: "Satisfação do cliente",
           url: "#",
         },
       ],
@@ -116,39 +131,7 @@ const data = {
         },
       ],
     },
-    {
-      title: "Análises",
-      url: "#",
-      icon: BookOpen,
-      items: [
-        {
-          title: "Relátorios",
-          url: "#",
-        },
-        {
-          title: "Satisfação do cliente",
-          url: "#",
-        },
-      ],
-    },
   ],
-  // projects: [
-  //   {
-  //     name: "Design Engineering",
-  //     url: "#",
-  //     icon: Frame,
-  //   },
-  //   {
-  //     name: "Sales & Marketing",
-  //     url: "#",
-  //     icon: PieChart,
-  //   },
-  //   {
-  //     name: "Travel",
-  //     url: "#",
-  //     icon: Map,
-  //   },
-  // ],
 }
 
 export function AppSidebar({
