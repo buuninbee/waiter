@@ -41,5 +41,3 @@ export default function MobileBottomNav() {
     </div>
   );
 }
-
-console.log(meuspedidos)
