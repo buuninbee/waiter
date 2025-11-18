@@ -19,7 +19,7 @@ const LayoutAdm = () => {
     <SidebarProvider>
       <AppSidebar />
             <header className="bg-(--primario-700) h-24 rounded-bl-4xl w-full px-8 py-7 flex mb-3">
-              <nav className= 'flex justify-between items-center-safe w-full xl:px-24'>
+              <nav className= 'flex justify-between items-center-safe w-full'>
                 <div className="flex gap items-center">
                   <div className="flex gap-1 items-center">    
                   <SidebarTrigger className="-ml-1 text-(--terciario-200)"/>
