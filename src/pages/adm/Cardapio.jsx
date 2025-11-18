@@ -33,7 +33,7 @@ const Cardapio = () => {
                         <div className="grid">
                             <h3 className="text-lg">Coca-cola de 600ml</h3>
                             <div className="flex text-sm">
-                                <button >Preço: R$ 8,00</button>
+                                <button >Preço: R$ 18,00</button>
                                 <button className="flex align-middle gap-1 ">
                                     <img className="w-6 h-auto" src={editar} alt="" />
                                     <p>Editar</p>
