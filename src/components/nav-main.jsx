@@ -27,7 +27,7 @@ export function NavMain({
           <Collapsible
             key={item.title}
             asChild
-            defaultOpen={item.isActive}
+            defaultOpen={item}
             className="group/collapsible">
             <SidebarMenuItem>
               <CollapsibleTrigger asChild>
@@ -43,7 +43,7 @@ export function NavMain({
                 <SidebarMenuSub>
                   {item.items?.map((subItem) => (
                     <SidebarMenuSubItem key={subItem.title}>
-                      {/* mudando as cores sub opções do menu  */}
+                      {/* mudando as cores sub opções do menu*/}
                       <SidebarMenuSubButton className='text-(--primario-900) font-medium' asChild>
                         <a href={subItem.url}>
                           <span>{subItem.title}</span>
