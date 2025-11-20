@@ -8,6 +8,7 @@ import {
 } from "@/components/ui/field"
 import { Input } from "@/components/ui/input"
 
+
 const Login = () => {
   return (
     <main className="grid justify-center align-middle h-[700px]">
@@ -28,7 +29,7 @@ const Login = () => {
                 </FieldGroup>
 
                 <Link className="w-max" to='/cadastro' > Não tem conta? Clique aqui</Link>
-                <Botao path='/sis' text="Entrar" />
+                <Botao path='/adm/pedidos' text="Entrar" />
             </FieldSet>
         </div>
         </section>
