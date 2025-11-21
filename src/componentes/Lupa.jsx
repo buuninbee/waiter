@@ -1,7 +1,7 @@
 import React from 'react'
 import IconLupa from "@/assets/lupa.svg"
 
-const Lupa = ({placeholder, value}) => {
+const Lupa = ({placeholder, value=''}) => {
   return (
     <div className='flex gap-2 px-2 py-1.5  items-center border rounded-lg'>
         <img className='' src={IconLupa} alt="" />
