@@ -3,6 +3,7 @@ import { PieChart } from '@mui/x-charts/PieChart';
 
 import Lupa from "../../assets/lupa.svg"
 import OrdemLista from '@/componentes/OrdemLista';
+import MenuLateral from '@/componentes/MenuLateral';
 
 const data = [
   { value: 20, color: "var(--secundario-600)" },
@@ -14,7 +15,10 @@ const Pedidos = () => {
   return (
     <main className="grid pb-8 w-full md:pl-10 md:pb-0">
         <section className="grid gap-5 px-8 py-6 md:py-7 lg:pt-11">
+          <div className='flex justify-between items-center'>
             <p className="text-(--primario-800) text-2xl">Meus Pedidos</p>
+            <MenuLateral />
+          </div>
             <div className='flex gap-2 px-2 py-1.5  items-center border rounded-lg'>
               <img className='' src={Lupa} alt="" />
               <input className='bg-[--terciario-400] w-full text-base appearance-none focus:outline-0' type="text" placeholder='Digite o número do seu pedido' name="" id="" />
@@ -60,8 +64,6 @@ const Pedidos = () => {
             </div>
           </div>
         </section>
-
-        
     </main>
   )
 }
