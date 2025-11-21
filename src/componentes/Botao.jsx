@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom"
+import { Link } from "react-router-dom"
 import { cn } from "@/lib/utils"
 
 const defaultButtonClasses = "py-2 px-4 text-lg rounded-sm md:text-xl";
@@ -14,11 +14,11 @@ const Botao = ({text, path, variant = "primario", img}) => {
     <button className={cn(defaultButtonClasses, variants[variant])}>
         {
             img ? 
-            <NavLink to={`/${path}`}>
+            <Link to={path}>
                 <img src={img} alt={text} />
             {text}
-            </NavLink> : 
-            <NavLink to={`/${path}`}>{text}</NavLink>
+            </Link> : 
+            <Link to={path}>{text}</Link>
         }
         
     </button>

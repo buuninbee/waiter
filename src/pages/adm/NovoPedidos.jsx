@@ -4,6 +4,9 @@ const NovoPedidos = () => {
   return (
     <div>
         <h1>Novo pedidos</h1>
+        <div>
+          tese
+        </div>
     </div>
   )
 }
