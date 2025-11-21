@@ -1,23 +1,24 @@
-import React from 'react'
+import { cn } from "@/lib/utils";
+import { useState } from "react";
 
-const Contador = () => {
+export default function Counter({ onChange, className }) {
+  const [qty, setQty] = useState(1);
 
- const [cont, setCont] = React.useState(1);
-
+  const update = (newValue) => {
+    if (newValue < 1) return;      // trava no mínimo 1
+    setQty(newValue);
+    onChange?.(newValue);          // envia valor para o pai/backend
+  };
 
   return (
-    <div className="flex items-center rounded-sm border border-gray-200">
-        <button onClick={() => cont > 1 && setCont(cont - 1)} min='1' type="button" className="size-10 leading-10 text-gray-600 transition hover:opacity-75">
-        −
-        </button>
+    <div className={cn(`flex items-center border rounded-md`,  className)}>
+    <button onClick={() => update(qty - 1)} className="size-10">−</button>
 
-        <input type="number" id="Quantity" value={cont} className="h-10 w-16 border-transparent text-center [-moz-appearance:textfield] sm:text-sm [&amp;::-webkit-inner-spin-button]:m-0 [&amp;::-webkit-inner-spin-button]:appearance-none [&amp;::-webkit-outer-spin-button]:m-0 [&amp;::-webkit-outer-spin-button]:appearance-none"/>
+    <span className="h-10 w-16 flex justify-center items-center">
+      {qty}
+    </span>
 
-        <button onClick={() => setCont(cont + 1)}  type="button" className="size-10 leading-10 text-gray-600 transition hover:opacity-75">
-        +
-        </button>
+    <button onClick={() => update(qty + 1)} className="size-10">+</button>
     </div>
-  )
+  );
 }
-
-export default Contador
