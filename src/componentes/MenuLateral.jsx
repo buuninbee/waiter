@@ -205,7 +205,7 @@ export default function MenuLateral() {
                     </div>
                   </div>
 
-                  <div className="grid gap-5 md:col-start-2 md:gap-1">
+                  <div className="grid gap-5 md:col-start-2 md:gap-4">
                     <div className="grid  md:gap-7 ">
                       <h3 className="text-xl mb-2 md:mb-0 md:h-0">Itens do pedido</h3>
                       <div className="grid  gap-2 border py-2 px-1.5 rounded-lg border-(--primario-800) bg-(--terciario-200) md:h-[500px]  overflow-y-auto overscroll-contain">
@@ -233,6 +233,10 @@ export default function MenuLateral() {
                         <div className="grid gap-3">
                             <Label htmlFor="sheet-demo-username">Nome</Label>
                             <Input id="sheet-demo-username" placeholder="Rafael Sacramento" />
+                        </div>
+                        <div className="grid gap-3">
+                            <Label htmlFor="sheet-demo-username">Endereço</Label>
+                            <Input id="sheet-demo-username" placeholder="Guara, casa 45" />
                         </div>
                     </div>
                   </div>
