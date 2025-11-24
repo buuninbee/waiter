@@ -1,13 +1,13 @@
 import addCategoria from "@/assets/icon-adicionar.svg"
 import lupa from "@/assets/lupa.svg"
-import seta from "@/assets/seta.svg"
-import editar from "@/assets/icon-editar.svg"
+// import editar from "@/assets/icon-editar.svg"
 
 import config from "@/assets/icon-config-cardapio.svg"
+import AccordionDemo from "@/componentes/AcordianCategoria"
 
 const Cardapio = () => {
   return (
-    <main className="grid pb-8 w-full">
+    <main className="grid pb-8 w-full md:pl-10 md:pb-0">
         <section className="grid gap-3.5 px-8 py-6 md:py-7 lg:pt-11">
             <div className="grid gap-7">
                 <button className="bg-(--primario-700) text-(--terciario-400) gap-3 py-3 text-lg px-1.5 flex justify-center rounded-xl">
@@ -27,7 +27,7 @@ const Cardapio = () => {
                     <h2 className="text-2xl">Bebidas</h2>
                     <button><img src={config} alt="" /></button>
                 </div>
-                <div className="">
+                {/* <div className="">
                     <div className="flex justify-between text-(--primario-800)">
                         <img className="w-32 rounded-lg" src="https://tse4.mm.bing.net/th/id/OIP.HLWGfV7i1irY6sqRMzfrPAHaHa?cb=ucfimgc2&rs=1&pid=ImgDetMain&o=7&rm=3" alt="" srcset="" />
                         <div className="grid">
@@ -44,7 +44,8 @@ const Cardapio = () => {
                     <div>
                         <button>Ver adicionais</button>
                     </div>
-                </div>
+                </div> */}
+        <AccordionDemo />
 
                 <button className="bg-(--primario-700) text-(--terciario-400) gap-3 py-3 text-lg px-1.5 flex justify-center rounded-xl">
                     <img className="w-6" src={addCategoria} alt="" />

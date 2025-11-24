@@ -19,7 +19,7 @@ import { NavLink } from 'react-router-dom'
 function Home() {
   return (
     <>
-      <main className='grid pb-8 w-full '>
+      <main className='grid pb-8 pt-30 w-full '>
         <section className='px-8 py-6  md:py-7 lg:pt-11'>
           <div className='grid text-center max-w-[1100px] justify-self-center  text-(--primario-700) gap-3.5 lg:gap-9'>
             <h1 className='text-xl font-medium sm:text-2xl md:text-3xl lg:text-4xl'>Transforme a experiência dos seus clientes com a digitalização do seu restaurante!</h1>
