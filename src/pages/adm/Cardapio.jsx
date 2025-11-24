@@ -3,7 +3,7 @@ import lupa from "@/assets/lupa.svg"
 // import editar from "@/assets/icon-editar.svg"
 
 import config from "@/assets/icon-config-cardapio.svg"
-import AccordionDemo from "@/componentes/AcordianCategoria"
+import ProdutosCategoria from "@/componentes/AcordianCategoria"
 
 const Cardapio = () => {
   return (
@@ -45,7 +45,7 @@ const Cardapio = () => {
                         <button>Ver adicionais</button>
                     </div>
                 </div> */}
-        <AccordionDemo />
+        <ProdutosCategoria />
 
                 <button className="bg-(--primario-700) text-(--terciario-400) gap-3 py-3 text-lg px-1.5 flex justify-center rounded-xl">
                     <img className="w-6" src={addCategoria} alt="" />
