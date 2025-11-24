@@ -7,7 +7,6 @@ import {
   FieldSet,
 } from "@/components/ui/field"
 import { Input } from "@/components/ui/input"
-import Pedidos from "../adm/Pedidos";
 
 
 const Login = () => {
@@ -30,7 +29,7 @@ const Login = () => {
                 </FieldGroup>
 
                 <Link className="w-max" to='/cadastro' > Não tem conta? Clique aqui</Link>
-                <Botao path={Pedidos} text="Entrar" />
+                <Botao path='/adm/pedidos' text="Entrar" />
             </FieldSet>
         </div>
         </section>
