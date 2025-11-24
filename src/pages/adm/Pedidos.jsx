@@ -17,7 +17,9 @@ const Pedidos = () => {
         <section className="grid gap-5 px-8 py-6 md:py-7 lg:pt-11">
           <div className='flex justify-between items-center'>
             <p className="text-(--primario-800) text-2xl">Meus Pedidos</p>
-            <MenuLateral />
+            <div className='hidden lg:grid'>
+              <MenuLateral/>
+            </div>
           </div>
             <div className='flex gap-2 px-2 py-1.5  items-center border rounded-lg'>
               <img className='' src={Lupa} alt="" />
