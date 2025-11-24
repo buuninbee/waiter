@@ -8,25 +8,17 @@ import {  NavLink } from "react-router-dom"
 const Nav = () => {
   const [aberto, setAberto] = React.useState(false)
 
-  // Carrega o valor salvo depois que o app iniciar
-  React.useEffect(() => {
-    const valorSalvo = localStorage.getItem("menuAberto")
-    if (valorSalvo !== null) {
-      setAberto(valorSalvo === "true")
-    }
-  }, [])
-
   const alternarMenu = () => {
-    setAberto(prev => {
-      const novo = !prev
-      localStorage.setItem("menuAberto", novo)
-      return novo
-    })
+    setAberto(prev => !prev)
   }
+  
   const styleNav = "grid justify-between items-center-safe w-full xl:px-24"
 
   return (
-      <header className={aberto ? "bg-(--primario-700) px-8 py-5 flex justify-between" : "bg-(--primario-700) h-auto rounded-bl-4xl w-full fixed px-8 py-7 flex justify-between"}>
+      <header className={aberto ?
+       "bg-(--primario-700) px-8 py-5 flex justify-between" :
+       "bg-(--primario-700) h-auto rounded-bl-4xl w-full fixed px-8 py-7 flex justify-between"}
+       >
         <nav className={aberto ? `${styleNav}  grid-cols-2` : `${styleNav} grid-cols-4`}>
           <div className={aberto ? 'block' : 'hidden'}>
             <NavLink to="/">
