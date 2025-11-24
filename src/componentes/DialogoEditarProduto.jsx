@@ -9,6 +9,7 @@ import {
     DialogClose
 } from "@/components/ui/dialog"
 import Seletor from "./Seletor"
+import { SquarePen } from "lucide-react"
 
 
 import Botao from "./Botao"
@@ -32,7 +33,10 @@ const DialogoLinkCardapio = () => {
    console.log(categoriaSelecionada, produtoNome, descricaoProduto, precoNumero);
     return (
         <Dialog>
-          <DialogTrigger>Editar Produto</DialogTrigger>
+          <DialogTrigger className='flex items-center gap-2 bg-(--primario-700) text-(--terciario-400) cursor-pointer hover:bg-(--primario-900) py-2 px-4 rounded-lg'>
+            <SquarePen />
+                Editar Produto
+         </DialogTrigger>
           <DialogContent>
             <DialogHeader className='text-left'>
                 <DialogTitle className=' text-xl mb-4 text-(--primario-800) text-center md:text-2xl'>Editar Produto</DialogTitle>
