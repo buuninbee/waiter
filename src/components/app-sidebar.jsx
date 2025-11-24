@@ -51,7 +51,7 @@ const data = {
         },
         {
           title: "Cardápio",
-          url: "#",
+          url: "/adm/cardapio",
         },
         {
           title: "Ordens de Serviço",
