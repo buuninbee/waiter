@@ -93,7 +93,7 @@ function CardapioTemplate() {
         </h1>
         <h2>Restaurante do seu chico</h2>
       </section>
-      <section className="px-6 max-w-4xl mx-auto">
+      <section className="px-6 max-w-4xl mx-auto pb-17">
         {/* Navegação rápida */}
         <div className="flex gap-4 justify-center">
           <a href="#entradas" className="text-(--secundario-900) font-semibold">Entradas</a>
