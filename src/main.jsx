@@ -28,17 +28,17 @@ createRoot(document.getElementById('root')).render(
         </Route>  
 
           <Route element={<LayoutForm/>} >
-            <Route path='/login' element={<Login/>}/>
-            <Route path='/cadastro' element={<Cadastro/>}/>
+            <Route path='login' element={<Login/>}/>
+            <Route path='cadastro' element={<Cadastro/>}/>
           </Route>
 
           <Route element={<LayoutAdm/>}>
-            <Route path='/adm/pedidos' element={<Pedidos/>}/>
-            <Route path='/adm/novo-pedido' element={<NovoPedidos/>}/>
-            <Route path='/adm/cardapio' element={<Cardapio/>}/>
+            <Route path='adm/pedidos' element={<Pedidos/>}/>
+            <Route path='adm/novo-pedido' element={<NovoPedidos/>}/>
+            <Route path='adm/cardapio' element={<Cardapio/>}/>
           </Route>
 
-            <Route path='cardapio-template' element={<CardapioTemplate/>}/>
+          <Route path='/cardapio-template' element={<CardapioTemplate/>}/>
         </Routes>
     </BrowserRouter>
   </StrictMode>,
