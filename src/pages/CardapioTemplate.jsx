@@ -2,6 +2,7 @@
 import MenuSeçao from "@/componentes/MenuSeçao";
 import DialogoChamaAtendente from "@/componentes/DialogoChamaAtendente";
 import CarrinhoCompra from "@/componentes/CarrinhoCompra";
+
 function CardapioTemplate() {
   // 👉 FUTURAMENTE: isso vira dados do banco (API)
   const entradas = [
