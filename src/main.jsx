@@ -16,6 +16,7 @@ import LayoutAdm from './pages/adm/LayoutAdm'
 import Cardapio from './pages/adm/Cardapio'
 import NovoPedidos from './pages/adm/NovoPedidos'
 import CardapioTemplate from './pages/CardapioTemplate'
+import DashboardProdutos from './pages/adm/DashbordProdutos'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -36,6 +37,7 @@ createRoot(document.getElementById('root')).render(
             <Route path='adm/pedidos' element={<Pedidos/>}/>
             <Route path='adm/novo-pedido' element={<NovoPedidos/>}/>
             <Route path='adm/cardapio' element={<Cardapio/>}/>
+            <Route path='adm/dashboard-produtos' element={<DashboardProdutos/>}/>
           </Route>
 
           <Route path='/cardapio-template' element={<CardapioTemplate/>}/>
