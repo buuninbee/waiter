@@ -316,11 +316,6 @@ export default function Dashboard() {
             <CardTitle className="text-2xl font-semibold tabular-nums @[250px]/card:text-3xl">
               R$ 42,00
             </CardTitle>
-            <CardAction>
-              <Badge className='bg-(--terciario-300) text-(--primario-800)' variant="outline">
-                +4.5%
-              </Badge>
-            </CardAction>
           </CardHeader>
         </div>
         </Card>
