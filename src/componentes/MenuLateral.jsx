@@ -17,6 +17,9 @@ import { Label } from "@/components/ui/label"
 import Lupa from "./Lupa"
 import addCategoria from "@/assets/icon-adicionar.svg"
 import DialogoPedido from "./DialogoPedido"
+import { useContext } from "react"
+import CardapioContext from "@/context/CardapioContext"
+import Loading from "@/loading/Loading"
 
 
 const produtos = {  
@@ -148,7 +151,9 @@ preco: 8.00
 ]
 
 
+
 export default function MenuLateral() {
+  const { loading} = useContext(CardapioContext)
   return (
     <Sheet>
       <SheetTrigger asChild>
@@ -162,7 +167,11 @@ export default function MenuLateral() {
         </SheetHeader>
         <div className='overflow-y-auto overscroll-contain overflow-hidden'>
           <div className="grid grid-cols-1  px-4">
-              <div className="grid gap-6 md:grid-cols-2">
+            {
+              loading ? (
+                <Loading/>
+              ) : (
+                <div className="grid gap-6 md:grid-cols-2">
                   <div className="grid gap-7 md:col-span-1 md:overflow-y-auto overscroll-contain overflow-hidden">
                     <Lupa placeholder="Buscar produto..." value=''/>
                     <div className="grid gap-2">
@@ -241,6 +250,8 @@ export default function MenuLateral() {
                     </div>
                   </div>
               </div>
+              )
+            }
           </div>
         </div>
           
