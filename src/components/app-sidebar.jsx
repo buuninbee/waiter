@@ -47,7 +47,7 @@ const data = {
       items: [
         {
           title: "Cadastrar",
-          url: "#",
+          url: "adm/cadastrar-produtos",
         },
         {
           title: "Cardápio",
@@ -55,7 +55,7 @@ const data = {
         },
         {
           title: "Ordens de Serviço",
-          url: "#",
+          url: "/adm/ordem-servico",
         },
       ],
     },
@@ -73,8 +73,8 @@ const data = {
           url: "#",
         },
         {
-          title: "Dashbord",
-          url: "#",
+          title: "Dashbord de vendas",
+          url: "/adm/dashboard-produtos",
         },
       ],
     },
@@ -85,7 +85,7 @@ const data = {
       items: [
         {
           title: "Novo pedido",
-          url: "#",
+          url: "adm/novo-pedido",
         },
         {
           title: "Satisfação do cliente",
