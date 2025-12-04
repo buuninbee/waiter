@@ -1,10 +1,10 @@
-// pages/Cardapio.jsx
 import MenuSeçao from "@/componentes/MenuSeçao";
 import DialogoChamaAtendente from "@/componentes/DialogoChamaAtendente";
 import CarrinhoCompra from "@/componentes/CarrinhoCompra";
+import CardapioContext from "@/context/CardapioContext";
+import { useContext } from "react";
 
 function CardapioTemplate() {
-  // 👉 FUTURAMENTE: isso vira dados do banco (API)
   const entradas = [
     {
       id: 1,
@@ -12,78 +12,131 @@ function CardapioTemplate() {
       titulo: "Almoço",
       descricao: "Arroz, feijão, macarrão e salada + acompanhamentos",
       imagem: "/assets/almoco1.png",
-      acompanhamentos: [
-        "Espetinho de carne",
-        "Espetinho de frango",
-        "Espetinho de linguiça de porco",
-      ],
+      preco: 24.90,
+      acompanhamentos: ["Espetinho de carne", "Espetinho de frango", "Linguiça"],
     },
     {
       id: 2,
       categoria: "Entradas",
       titulo: "Almoço do dia",
-      descricao: "Arroz, feijão, macarrão e salada + acompanhamentos",
+      descricao: "Arroz, feijão, macarrão e salada",
       imagem: "/assets/almoco2.png",
-      acompanhamentos: [
-        "Espetinho de carne",
-        "Espetinho de frango",
-        "Espetinho de linguiça de frango",
-      ],
+      preco: 22.90,
+      acompanhamentos: ["Carne", "Frango"],
     },
-  ];
-
-  const bebidas = [
     {
       id: 3,
-      categoria: "Bebidas",
-      titulo: "Pepsi",
-      descricao: "500 ml",
-      imagem: "/assets/bebida2.png",
+      categoria: "Entradas",
+      titulo: "Feijoada",
+      descricao: "Feijão preto, arroz, couve e farofa",
+      imagem: "/assets/feijoada.png",
+      preco: 29.90,
     },
     {
       id: 4,
-      categoria: "Bebidas",
-      titulo: "Coca-cola",
-      descricao: "500 ml",
-      imagem: "/assets/bebida1.png",
+      categoria: "Entradas",
+      titulo: "Strogonoff de Frango",
+      descricao: "Acompanha arroz e batata palha",
+      imagem: "/assets/strogonoff.png",
+      preco: 27.90,
     },
     {
       id: 5,
-      categoria: "Bebidas",
-      titulo: "Heineken",
-      descricao: "500 ml",
-      imagem: "/assets/bebida3.png",
-      acompanhamentos: ["1 litro", "600 ml"],
+      categoria: "Entradas",
+      titulo: "Parmegiana",
+      descricao: "Carne empanada com queijo",
+      imagem: "/assets/parmegiana.png",
+      preco: 31.90,
     },
-  ];
-
-  const aperitivos = [
     {
       id: 6,
-      categoria: "Aperitivo",
-      titulo: "Churrasquinho",
-      imagem: "/assets/aperitivo1.png",
-      acompanhamentos: [
-        "Espetinho de carne",
-        "Espetinho de frango",
-        "Espetinho de linguiça de porco",
-      ],
+      categoria: "Entradas",
+      titulo: "Macarrão à Bolonhesa",
+      descricao: "Massa com molho de carne",
+      imagem: "/assets/macarrao.png",
+      preco: 23.90,
     },
     {
       id: 7,
+      categoria: "Entradas",
+      titulo: "Frango Grelhado",
+      descricao: "Acompanha legumes e arroz",
+      imagem: "/assets/frango.png",
+      preco: 25.90,
+    },
+  ];
+  
+  const bebidas = [
+    { id: 8, categoria: "Bebidas", titulo: "Pepsi", descricao: "500 ml", imagem: "/assets/bebida2.png", preco: 6.50 },
+    { id: 9, categoria: "Bebidas", titulo: "Coca-cola", descricao: "500 ml", imagem: "/assets/bebida1.png", preco: 7.00 },
+    { id: 10, categoria: "Bebidas", titulo: "Heineken", descricao: "500 ml", imagem: "/assets/bebida3.png", preco: 12.00 },
+    { id: 11, categoria: "Bebidas", titulo: "Suco Natural", descricao: "500 ml", imagem: "/assets/suco.png", preco: 8.00 },
+    { id: 12, categoria: "Bebidas", titulo: "Água Sem Gás", descricao: "500 ml", imagem: "/assets/agua.png", preco: 4.00 },
+    { id: 13, categoria: "Bebidas", titulo: "Guaraná Antarctica", descricao: "500 ml", imagem: "/assets/guarana.png", preco: 6.50 },
+    { id: 14, categoria: "Bebidas", titulo: "Energético", descricao: "473 ml", imagem: "/assets/energetico.png", preco: 14.00 },
+  ];
+  
+
+  const aperitivos = [
+    {
+      id: 15,
       categoria: "Aperitivo",
-      titulo: "Torresmo",
-      descricao: "Carne de porco",
-      imagem: "/assets/aperitivo2.png",
+      titulo: "Churrasquinho",
+      imagem: "/assets/aperitivo1.png",
+      preco: 18.90,
+      acompanhamentos: ["Espetinho de carne", "Espetinho de frango"],
     },
     {
-      id: 8,
+      id: 16,
+      categoria: "Aperitivo",
+      titulo: "Torresmo",
+      descricao: "Carne de porco crocante",
+      imagem: "/assets/aperitivo2.png",
+      preco: 16.50,
+    },
+    {
+      id: 17,
       categoria: "Aperitivo",
       titulo: "Tilápia frita",
       descricao: "600 g",
       imagem: "/assets/aperitivo3.png",
+      preco: 34.90,
+    },
+    {
+      id: 18,
+      categoria: "Aperitivo",
+      titulo: "Batata Frita",
+      descricao: "Porção média",
+      imagem: "/assets/batata.png",
+      preco: 14.90,
+    },
+    {
+      id: 19,
+      categoria: "Aperitivo",
+      titulo: "Calabresa Acebolada",
+      descricao: "Porção 500 g",
+      imagem: "/assets/calabresa.png",
+      preco: 19.90,
+    },
+    {
+      id: 20,
+      categoria: "Aperitivo",
+      titulo: "Pastéis",
+      descricao: "6 unidades",
+      imagem: "/assets/pasteis.png",
+      preco: 17.90,
+    },
+    {
+      id: 21,
+      categoria: "Aperitivo",
+      titulo: "Isca de Frango",
+      descricao: "Empanado crocante",
+      imagem: "/assets/isca.png",
+      preco: 22.90,
     },
   ];
+
+  const {name} = useContext(CardapioContext)
 
   return (
     <main className="">
@@ -91,7 +144,7 @@ function CardapioTemplate() {
         <h1 className="text-3xl font-bold mb-4">
           Olá, sejam bem-vindos ao nosso cardápio
         </h1>
-        <h2>Restaurante do seu chico</h2>
+        <h2>Restaurante do seu chico {name}</h2>
       </section>
       <section className="px-6 max-w-4xl mx-auto pb-17">
         {/* Navegação rápida */}
