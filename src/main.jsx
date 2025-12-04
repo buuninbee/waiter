@@ -17,31 +17,39 @@ import Cardapio from './pages/adm/Cardapio'
 import NovoPedidos from './pages/adm/NovoPedidos'
 import CardapioTemplate from './pages/CardapioTemplate'
 import DashboardProdutos from './pages/adm/DashbordProdutos'
+import Provider from './context/Provider'
+import CadastrarProduto from '@/pages/adm/CadastrarProduto'
+import OrdemServico from '@/pages/adm/OrdemServico'
+
+
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter>
-        <Routes>
-        <Route element={<App />}>
-            <Route path='/' element={<Home/>}/>
-            <Route path='cardapioDigital' element={<CardapioDigital/>}/>
-            <Route path='qrCode' element={<QrCode/>}/>
-        </Route>  
+    <Provider>
+      <BrowserRouter>
+          <Routes>
+          <Route element={<App />}>
+              <Route path='/' element={<Home/>}/>
+              <Route path='cardapioDigital' element={<CardapioDigital/>}/>
+              <Route path='qrCode' element={<QrCode/>}/>
+          </Route>  
 
-          <Route element={<LayoutForm/>} >
-            <Route path='login' element={<Login/>}/>
-            <Route path='cadastro' element={<Cadastro/>}/>
-          </Route>
+            <Route element={<LayoutForm/>} >
+              <Route path='login' element={<Login/>}/>
+              <Route path='cadastro' element={<Cadastro/>}/>
+            </Route>
 
-          <Route element={<LayoutAdm/>}>
-            <Route path='adm/pedidos' element={<Pedidos/>}/>
-            <Route path='adm/novo-pedido' element={<NovoPedidos/>}/>
-            <Route path='adm/cardapio' element={<Cardapio/>}/>
-            <Route path='adm/dashboard-produtos' element={<DashboardProdutos/>}/>
-          </Route>
-
-          <Route path='/cardapio-template' element={<CardapioTemplate/>}/>
-        </Routes>
-    </BrowserRouter>
+            <Route element={<LayoutAdm/>}>
+              <Route path='adm/pedidos' element={<Pedidos/>}/>
+              <Route path='adm/novo-pedido' element={<NovoPedidos/>}/>
+              <Route path='adm/cardapio' element={<Cardapio/>}/>
+              <Route path='adm/dashboard-produtos' element={<DashboardProdutos/>}/>
+              <Route path='adm/cadastrar-produtos' element={<CadastrarProduto/>}/>
+              <Route path='adm/ordem-servico' element={<OrdemServico />}/>
+            </Route>
+              <Route path='/cardapio-template' element={<CardapioTemplate/>}/>
+          </Routes>
+      </BrowserRouter>
+    </Provider>
   </StrictMode>,
 )
