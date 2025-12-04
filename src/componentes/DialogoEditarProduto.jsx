@@ -56,7 +56,7 @@ const DialogoLinkCardapio = () => {
                         <InputImagem />
                         <InputPreco
                         value={preco}
-                        onChange={(valor) => setPreco(valor)}  // <<==== recebe do filho
+                        onChange={(valor) => setPreco(valor)}  // 
                         />
                     <Botao  text="Salvar alterações" variant="primario" />
                 </form>
