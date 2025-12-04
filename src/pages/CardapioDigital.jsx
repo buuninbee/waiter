@@ -11,7 +11,7 @@ const CardapioDigital = () =>{
           <p className='text-sm sm:text-lg lg:text-2xl'>Link para compartilhar: acesse o cardápio online web</p>
           <div className='bg-(--primario-800) text-(--terciario-400) max-w-max flex gap-3 py-3 px-3 rounded-md justify-self-center md:mt-2'>
             <img src={QrcodeIcon} alt="" />
-            <NavLink className="px-2.5" to="/">
+            <NavLink className="px-2.5" to="/cardapio-template">
               Ver cardápio web
             </NavLink>
           </div>
