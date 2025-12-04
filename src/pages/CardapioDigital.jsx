@@ -1,6 +1,7 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import QrcodeIcon from '../assets/qrCode-icon.svg'
+import linkQr from "@/assets/qrcode_waiterg.vercel.app.png"
 
 const CardapioDigital = () =>{
   return (
@@ -9,6 +10,9 @@ const CardapioDigital = () =>{
         <div className='grid text-center max-w-[1100px] justify-self-center  text-(--primario-700) gap-3.5 md:gap-2 lg:gap-4'>
           <h1 className='text-xl font-medium sm:text-2xl md:text-3xl lg:text-4xl'>Veja como seu cadárpio vai aparecer</h1>
           <p className='text-sm sm:text-lg lg:text-2xl'>Link para compartilhar: acesse o cardápio online web</p>
+          <div className='m-auto w-40 lg:w-52'>
+            <img src={linkQr} alt="" />
+          </div>
           <div className='bg-(--primario-800) text-(--terciario-400) max-w-max flex gap-3 py-3 px-3 rounded-md justify-self-center md:mt-2'>
             <img src={QrcodeIcon} alt="" />
             <NavLink className="px-2.5" to="/cardapio-template">
