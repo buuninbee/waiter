@@ -1,8 +1,16 @@
 import fotocarda from "@/assets/imagem-padaro-cadarpio.svg"
 import Botao from "./Botao";
+import { useContext } from "react";
+import CardapioContext from "@/context/CardapioContext";
 
 
 function MenuItem({ item }) {
+
+  const {cartItens, setCartItens} = useContext(CardapioContext)
+
+  const adicionarAoCarrrinho = () => {    
+    setCartItens([...cartItens, item])
+  }
     return (
       <div className="bg-white shadow-md rounded-lg p-4 flex flex-col gap-3">
         <h2 className="text-lg font-semibold">{item.categoria}</h2>
@@ -32,7 +40,7 @@ function MenuItem({ item }) {
           </div>
         )}
   
-        <button className="bg-(--primario-700) text-(--terciario-400) cursor-pointer hover:bg-(--primario-900) py-2 px-4 text-lg rounded-sm md:text-xl">Adicionar ao carrinho</button>
+        <button onClick={adicionarAoCarrrinho} className="bg-(--primario-700) text-(--terciario-400) cursor-pointer hover:bg-(--primario-900) py-2 px-4 text-lg rounded-sm md:text-xl">Adicionar ao carrinho</button>
       </div>
     );
   }
