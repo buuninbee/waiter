@@ -11,7 +11,7 @@ function CardapioTemplate() {
       categoria: "Entradas",
       titulo: "Almoço",
       descricao: "Arroz, feijão, macarrão e salada + acompanhamentos",
-      imagem: "/assets/almoco1.png",
+      imagem: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c",
       preco: 24.90,
       acompanhamentos: ["Espetinho de carne", "Espetinho de frango", "Linguiça"],
     },
@@ -20,7 +20,7 @@ function CardapioTemplate() {
       categoria: "Entradas",
       titulo: "Almoço do dia",
       descricao: "Arroz, feijão, macarrão e salada",
-      imagem: "/assets/almoco2.png",
+      imagem: "https://img.freepik.com/fotos-gratis/xatrade-de-marmitas-com-sabor-tipico-brasileiro-e-a-base-da-comida-brasileira-arroz-e-feijao_317111-1183.jpg",
       preco: 22.90,
       acompanhamentos: ["Carne", "Frango"],
     },
@@ -29,7 +29,7 @@ function CardapioTemplate() {
       categoria: "Entradas",
       titulo: "Feijoada",
       descricao: "Feijão preto, arroz, couve e farofa",
-      imagem: "/assets/feijoada.png",
+      imagem: "https://th.bing.com/th/id/R.eaeb7da9bd7462940f0b07dcb1b50f02?rik=fwx22JblWyPwow&pid=ImgRaw&r=0",
       preco: 29.90,
     },
     {
@@ -37,7 +37,7 @@ function CardapioTemplate() {
       categoria: "Entradas",
       titulo: "Strogonoff de Frango",
       descricao: "Acompanha arroz e batata palha",
-      imagem: "/assets/strogonoff.png",
+      imagem: "https://tudodereceitas.com.br/wp-content/uploads/2024/11/Strogonoff-de-frango-.jpeg",
       preco: 27.90,
     },
     {
@@ -45,7 +45,7 @@ function CardapioTemplate() {
       categoria: "Entradas",
       titulo: "Parmegiana",
       descricao: "Carne empanada com queijo",
-      imagem: "/assets/parmegiana.png",
+      imagem: "https://th.bing.com/th/id/R.cd49ea1e4bb22d9cf9bfc372dff3e6e5?rik=ElXpQ7j4W4gvlQ&riu=http%3a%2f%2fonthelist.com.br%2fuploads%2f2014%2f07%2fMilanesa-Parmegiana.jpg&ehk=OtZqCX%2fY43J8uypoKxPHuJQiZkYhJFUu7SMOh6gBqZ4%3d&risl=&pid=ImgRaw&r=0",
       preco: 31.90,
     },
     {
@@ -53,7 +53,7 @@ function CardapioTemplate() {
       categoria: "Entradas",
       titulo: "Macarrão à Bolonhesa",
       descricao: "Massa com molho de carne",
-      imagem: "/assets/macarrao.png",
+      imagem: "https://tse4.mm.bing.net/th/id/OIP.t8YneLjpyUTZOmgnvYZdtwHaFO?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3",
       preco: 23.90,
     },
     {
@@ -61,28 +61,77 @@ function CardapioTemplate() {
       categoria: "Entradas",
       titulo: "Frango Grelhado",
       descricao: "Acompanha legumes e arroz",
-      imagem: "/assets/frango.png",
+      imagem: "https://bellami.com.br/2017/wp-content/uploads/2017/01/file-de-frango-grelhado-1.jpg",
       preco: 25.90,
     },
   ];
   
+  
   const bebidas = [
-    { id: 8, categoria: "Bebidas", titulo: "Pepsi", descricao: "500 ml", imagem: "/assets/bebida2.png", preco: 6.50 },
-    { id: 9, categoria: "Bebidas", titulo: "Coca-cola", descricao: "500 ml", imagem: "/assets/bebida1.png", preco: 7.00 },
-    { id: 10, categoria: "Bebidas", titulo: "Heineken", descricao: "500 ml", imagem: "/assets/bebida3.png", preco: 12.00 },
-    { id: 11, categoria: "Bebidas", titulo: "Suco Natural", descricao: "500 ml", imagem: "/assets/suco.png", preco: 8.00 },
-    { id: 12, categoria: "Bebidas", titulo: "Água Sem Gás", descricao: "500 ml", imagem: "/assets/agua.png", preco: 4.00 },
-    { id: 13, categoria: "Bebidas", titulo: "Guaraná Antarctica", descricao: "500 ml", imagem: "/assets/guarana.png", preco: 6.50 },
-    { id: 14, categoria: "Bebidas", titulo: "Energético", descricao: "473 ml", imagem: "/assets/energetico.png", preco: 14.00 },
+    {
+      id: 8,
+      categoria: "Bebidas",
+      titulo: "Pepsi",
+      descricao: "500 ml",
+      imagem: "https://i0.wp.com/dailymarket.com.gt/wp-content/uploads/2022/10/901146-PEPSI-LATA.jpg?fit=1040%2C1040&ssl=1",
+      preco: 6.50,
+    },
+    {
+      id: 9,
+      categoria: "Bebidas",
+      titulo: "Coca-cola",
+      descricao: "500 ml",
+      imagem: "https://images.unsplash.com/photo-1622483767028-3f66f32aef97",
+      preco: 7.00,
+    },
+    {
+      id: 10,
+      categoria: "Bebidas",
+      titulo: "Heineken",
+      descricao: "500 ml",
+      imagem: "https://www.everythingwine.ca/media/catalog/product/3/3/337949_heinekan_tc_new_version.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=700&width=700&canvas=700:700",
+      preco: 12.00,
+    },
+    {
+      id: 11,
+      categoria: "Bebidas",
+      titulo: "Suco Natural Marácuja",
+      descricao: "500 ml",
+      imagem: "https://tse4.mm.bing.net/th/id/OIP.Khd2_6HbShAMSDniCy9q1wHaHa?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3",
+      preco: 8.00,
+    },
+    {
+      id: 12,
+      categoria: "Bebidas",
+      titulo: "Água Sem Gás",
+      descricao: "500 ml",
+      imagem: "https://images.unsplash.com/photo-1616118132534-381148898bb4",
+      preco: 4.00,
+    },
+    {
+      id: 13,
+      categoria: "Bebidas",
+      titulo: "Guaraná Antarctica",
+      descricao: "500 ml",
+      imagem: "https://dcdn-us.mitiendanube.com/stores/005/069/840/products/1-refrigerante-guarana-antarctica-zero-lata-350ml-b5225835a0532a890717304348710890-1024-1024.png",
+      preco: 6.50,
+    },
+    {
+      id: 14,
+      categoria: "Bebidas",
+      titulo: "Energético Red Bull",
+      descricao: "355 ml",
+      imagem: "https://th.bing.com/th/id/R.aabea5fa6b63d7a8c95c35488267546a?rik=P1u1RhFR5Zy%2feQ&pid=ImgRaw&r=0",
+      preco: 14.00,
+    },
   ];
   
-
   const aperitivos = [
     {
       id: 15,
       categoria: "Aperitivo",
       titulo: "Churrasquinho",
-      imagem: "/assets/aperitivo1.png",
+      imagem: "https://tse4.mm.bing.net/th/id/OIP.LaC48Gk1R169tj4YoLfn8QHaE7?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3",
       preco: 18.90,
       acompanhamentos: ["Espetinho de carne", "Espetinho de frango"],
     },
@@ -91,7 +140,7 @@ function CardapioTemplate() {
       categoria: "Aperitivo",
       titulo: "Torresmo",
       descricao: "Carne de porco crocante",
-      imagem: "/assets/aperitivo2.png",
+      imagem: "https://tse3.mm.bing.net/th/id/OIP.rED9hEmbEIIPaoxooVaBVgHaEK?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3",
       preco: 16.50,
     },
     {
@@ -99,7 +148,7 @@ function CardapioTemplate() {
       categoria: "Aperitivo",
       titulo: "Tilápia frita",
       descricao: "600 g",
-      imagem: "/assets/aperitivo3.png",
+      imagem: "https://receitasdothales.com/wp-content/uploads/2023/03/file-de-tilapia-frito.jpg",
       preco: 34.90,
     },
     {
@@ -107,7 +156,7 @@ function CardapioTemplate() {
       categoria: "Aperitivo",
       titulo: "Batata Frita",
       descricao: "Porção média",
-      imagem: "/assets/batata.png",
+      imagem: "https://th.bing.com/th/id/R.9bfbfc3c085f85cff5f8c571ce5e6f46?rik=HJxlurDItzrchA&riu=http%3a%2f%2fs2.glbimg.com%2fD7CDxKqnsn1t5wHozJeYgJHmwMs%3d%2fsmart%2fe.glbimg.com%2fog%2fed%2ff%2foriginal%2f2015%2f05%2f26%2fthinkstockphotos-177334426.jpg&ehk=2DR%2fAygQ53WT0AhXkI2Oc8C1w66HkumwVeaHcWrrQus%3d&risl=&pid=ImgRaw&r=0",
       preco: 14.90,
     },
     {
@@ -115,7 +164,7 @@ function CardapioTemplate() {
       categoria: "Aperitivo",
       titulo: "Calabresa Acebolada",
       descricao: "Porção 500 g",
-      imagem: "/assets/calabresa.png",
+      imagem: "https://manualdohomemmoderno.com.br/files/2020/05/como-fazer-calabresa-acebolada-na-cachaca-petiscos-pra-fazer-em-casa-como-fazer-calabresa-acebolada-na-cachaca-petiscos-pra-fazer-em-casa.jpg",
       preco: 19.90,
     },
     {
@@ -123,7 +172,7 @@ function CardapioTemplate() {
       categoria: "Aperitivo",
       titulo: "Pastéis",
       descricao: "6 unidades",
-      imagem: "/assets/pasteis.png",
+      imagem: "https://s2.glbimg.com/sS3P20QS_pQZiVcKDpzSrOxQt8A=/1200x/smart/filters:cover():strip_icc()/i.s3.glbimg.com/v1/AUTH_b58693ed41d04a39826739159bf600a0/internal_photos/bs/2022/A/B/n6cY5FQqK97tiDLvJERQ/pasteeel.jpg",
       preco: 17.90,
     },
     {
@@ -131,10 +180,11 @@ function CardapioTemplate() {
       categoria: "Aperitivo",
       titulo: "Isca de Frango",
       descricao: "Empanado crocante",
-      imagem: "/assets/isca.png",
+      imagem: "https://folhago.com.br/blogs/receitas-faceis/wp-content/uploads/2021/01/iscas-de-frango-empanado-super-crocante.jpg",
       preco: 22.90,
     },
   ];
+  
 
   const {name} = useContext(CardapioContext)
 
