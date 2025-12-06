@@ -5,9 +5,9 @@ export default function Counter({ onChange, className }) {
   const [qty, setQty] = useState(1);
 
   const update = (newValue) => {
-    if (newValue < 1) return;      // trava no mínimo 1
+    if (newValue < 1) return;     
     setQty(newValue);
-    onChange?.(newValue);          // envia valor para o pai/backend
+    onChange?.(newValue);
   };
 
   return (
