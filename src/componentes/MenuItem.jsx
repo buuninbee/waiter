@@ -8,6 +8,7 @@ function MenuItem({ item }) {
 
   const {cartItens, setCartItens} = useContext(CardapioContext)
 
+  console.log(cartItens)
   const adicionarAoCarrrinho = () => {    
     setCartItens([...cartItens, item])
   }
@@ -16,11 +17,19 @@ function MenuItem({ item }) {
         <h2 className="text-lg font-semibold">{item.categoria}</h2>
   
         <div className="block m-auto">
-          <img src={item.image ? item.image : fotocarda} alt={item.titulo} className=" w-min-[300px] min-h-[300px] rounded-md" />
+        <img
+          src={item.imagem || fotocarda}
+          alt={item.titulo}
+          className="min-w-[300px] min-h-[300px] rounded-md m-auto"
+        />
+
         </div>
   
         <div>
-          <h3 className="text-xl font-semibold">{item.titulo}</h3>
+          <div className="flex items-center justify-between">
+            <h3 className="text-xl font-semibold">{item.titulo}</h3>
+            <p className="text-xl font-bold text-(--primario-900)">R$ {item.preco}</p>
+          </div>
           {item.descricao && (
             <p className="text-gray-600 text-sm">{item.descricao}</p>
           )}
