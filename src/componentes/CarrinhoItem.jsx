@@ -1,14 +1,11 @@
 import React from 'react'
-import Contador from '@/componentes/Contador'
+import fecharIcon from "@/assets/icon-fechar.svg"
 
 import { useContext } from 'react';
 import CardapioContext from '@/context/CardapioContext';
 
 const CarrinhoItem = () => {
-    const {cartItens} = useContext(CardapioContext)
-  const [qtd, setQtd] = React.useState(1);
-  const total = qtd * cartItens.preco;
-  console.log(total)
+  const {cartItens, setCartItens} = useContext(CardapioContext)
 
   console.log(cartItens)
   return (
@@ -18,16 +15,17 @@ const CarrinhoItem = () => {
             cartItens.map((item) => {
                 return(
                     <div key={item.id} className='grid gap-2 max-h-[180px] border border-amber-50 rounded-xl py-2 px-3.5'>
-                        <div className='flex justify-between gap-2 text-(--terciario-200)'>
-                            <div>
-                            <p className='text-sm text-(--terciario-700)'>{item.categoria}</p>
-                            <h2 className='text-2xl'>{item.titulo}</h2>
+                        <div className='flex h-auto justify-between gap-2 text-(--terciario-200)'>
+                            <div className='grid grid-cols-1 gap-1'>
+                                <p className='text-sm text-(--terciario-700)'>{item.categoria}</p>
+                                <h2 className='text-2xl'>{item.titulo}</h2>
                             </div>
-                            <button className='bg-(--secundario-800) self-start text-(--secundario-200) py-1.5 px-3 rounded-lg'>X</button>
+                            <button onClick={() => {
+                            setCartItens(prev => prev.filter(i => i.id !== item.id));
+                            }} className='bg-(--secundario-200) self-start text-(--secundario-200) py-1.5 px-3 rounded-lg'><img className='w-3 h-3' src={fecharIcon} alt="" /></button>
                         </div>
                         <div className='flex items-center justify-between'>
-                            <Contador onChange={(value) => setQtd(value)} className="max-w-max" />
-                            <span className='text-xl'>R$ {(item.preco * qtd).toFixed(2)}</span>
+                            <span className='text-xl'>R$ {item.preco.toFixed(2)}</span>
                         </div>
                     </div>
                 )
