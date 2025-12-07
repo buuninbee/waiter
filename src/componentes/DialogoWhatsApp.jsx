@@ -15,6 +15,7 @@ import CardapioContext from "@/context/CardapioContext"
 import { toast, Toaster } from "sonner"
 import { useNavigate } from "react-router-dom";
 
+
 const usuarioFormSchema = z.object({
   nome: z.string().min(1, "Nome obrigatório"),
   numero: z
@@ -82,8 +83,6 @@ ${itensFormatados}
 
       const data = await response.json();
       console.log('Mensagem enviada com sucesso:', data);
-
-
 
       // ✅ FECHA O DIALOG
       setOpen(false);
