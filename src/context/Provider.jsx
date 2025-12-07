@@ -7,7 +7,11 @@ const Provider = ({children}) => {
     const [loadiang, setLoading] = useState(true)
     const [cartItens, setCartItens] = useState([])
 
-    const value = {produtos, setProdutos, setLoading, loadiang, cartItens, setCartItens}
+  const precos = cartItens.map((produto) => produto.preco * produto.quantidade)
+  const totalPreco = precos.reduce((acc, item) => (item + acc), 0).toFixed(2)
+
+
+    const value = {produtos, setProdutos, setLoading, loadiang, cartItens, setCartItens, totalPreco}
   return (
     <CardapioContext.Provider value={value} >
         {children}
