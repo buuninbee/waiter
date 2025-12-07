@@ -7,97 +7,84 @@ import {  NavLink } from "react-router-dom"
 import Botao from "./Botao"
 
 const Nav = () => {
-  const [aberto, setAberto] = React.useState(false)
+  const [aberto, setAberto] = React.useState(false);
 
   const alternarMenu = () => {
-    setAberto(prev => !prev)
-  }
-  
-  const styleNav = "grid justify-between items-center-safe w-full xl:px-24"
+    setAberto(prev => !prev);
+  };
 
   return (
-      // <header className={aberto ?
-      //  "bg-(--primario-700) px-8 py-5 flex justify-between" :
-      //  "bg-(--primario-700) h-auto rounded-bl-4xl w-full fixed px-8 py-7 flex justify-between"}
-      //  >
-      //   <nav className={aberto ? `${styleNav}  grid-cols-2` : `${styleNav} grid-cols-4`}>
-      //     <div className={aberto ? 'block' : 'hidden'}>
-      //       <NavLink to="/">
-      //         <img className="w-36 h-auto" src={Logo} alt="logo waiter"/>
-      //       </NavLink>
-      //     </div>
+    <header className="fixed top-0 z-50 w-full bg-(--primario-700)">
+      <div className="mx-auto max-w-7xl px-4 py-4">
+        <div className="flex items-center justify-between">
+          {/* logo waiter */}
+          <NavLink to="/">
+            <img className="w-32" src={Logo} alt="logo waiter" />
+          </NavLink>
 
-      //     <div className={aberto ? 'hidden transition duration-800 ease-in-out' : 'grid self-start col-span-3 '}>
-      //       <ul className="grid gap-6 pt-10 text-2xl text-(--terciario-50)">
-      //         <li className=""><NavLink to="/">Home</NavLink></li>
-      //         <li className=""><NavLink to="/qrCode">Qr-code</NavLink></li>
-      //         <li className="w-full"><NavLink to="/cardapioDigital">Cardápio digital</NavLink></li>
-      //       </ul>
-      //     </div>
-      //     <div className={aberto ? 'grid justify-self-end' : 'grid justify-self-end self-start'}>
-      //         <button className="self-start block md:hidden" onClick={alternarMenu} >
-      //           <img className="w-7" src={aberto ? MenuAberto : MenuFechado} alt="icone do menu"/>
-      //         </button>
+          {/* navegação desktop */}
+          <div className="flex items-center gap-8">
+              <ul className="hidden md:flex gap-8 text-xl text-(--terciario-50)">
+                <li><NavLink to="/">Home</NavLink></li>
+                <li><NavLink to="/qrCode">Qr-code</NavLink></li>
+                <li><NavLink to="/cardapioDigital">Cardápio digital</NavLink></li>
+              </ul>
 
-      //       <ul className="hidden md:flex gap-7 text-xl text-(--terciario-50)">
-      //         <li className="link-paginas"><NavLink to="/">Home</NavLink></li>
-      //         <li className="link-paginas"><NavLink to="/qrCode">Qr-code</NavLink></li>
-      //         <li className="link-paginas"><NavLink to="/cardapioDigital">Cardápio digital</NavLink></li>
-      //       </ul>
-      //     </div>
-      //   </nav>
-      // </header>
+              <div className="hidden md:block">
+                <Botao path="/login" variant="secundario" text="Login" />
+              </div>
 
-      <header class={aberto ?
-        "bg-(--primario-700) px-8 py-5 " :
-        "bg-(--primario-700) h-auto rounded-bl-4xl fixed w-full px-4 py-6"}>
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-    <div class="flex gap-6 h-16 items-center justify-between">
-      <div className='grid'>
-             <NavLink to="/">
-               <img className="w-36 h-auto" src={Logo} alt="logo waiter"/>
-             </NavLink>
-      </div>
-
-{/* menun mobile */}
-      <div class="md:flex md:items-center md:gap-12">
-        <nav aria-label="Global" class="block md:hidden">
-        <ul className="hidden items-center text-sm gap-6 text-(--terciario-50)">
-               <li className=""><NavLink to="/">Home</NavLink></li>
-               <li className=""><NavLink to="/qrCode">Qr-code</NavLink></li>
-               <li className="w-full"><NavLink to="/cardapioDigital">Cardápio digital</NavLink></li>
-             </ul>
-        </nav>
-{/*  */}
-
-{/* nav desktop */}
-
-        <div className="md:grid">
-          <ul className="hidden md:flex gap-7 text-xl text-(--terciario-50)">
-                <li className="link-paginas"><NavLink to="/">Home</NavLink></li>
-                <li className="link-paginas"><NavLink to="/qrCode">Qr-code</NavLink></li>
-                <li className="link-paginas"><NavLink to="/cardapioDigital">Cardápio digital</NavLink></li>
-          </ul>
-        </div>
-
-        <div class="flex items-center gap-4">
-          <div class="sm:flex sm:gap-4">
-           <Botao path='/login' variant="secundario" text='Login' />
+              <button
+                onClick={alternarMenu}
+                className="md:hidden"
+              >
+                <img
+                  className="w-8"
+                  src={ MenuAberto}
+                  alt="Menu"
+                />
+              </button>
           </div>
 
-          <div class="block md:hidden">
-            <button class="rounded-sm bg-gray-100 p-2 text-gray-600 transition hover:text-gray-600/75">
-              <svg xmlns="http://www.w3.org/2000/svg" class="size-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
-              </svg>
-            </button>
-          </div>
         </div>
       </div>
-    </div>
-  </div>
-</header>
-  )
+
+      {/* OVERLAY */}
+      {aberto && (
+        <div
+          onClick={alternarMenu}
+          className="fixed inset-0 bg-black/50 md:hidden"
+        />
+      )}
+
+      {/* navegação mobile */}
+      <div
+        className={`fixed top-0 right-0 h-full w-64 bg-(--primario-700) text-(--terciario-50) transform transition-transform duration-300 md:hidden
+        ${aberto ? "translate-x-0" : "translate-x-full"}`}
+      >
+        <div className="grid pt-4  p-6 ">
+
+        <button
+            onClick={alternarMenu}
+            className="justify-self-end md:hidden"
+          >
+            <img
+              className="w-8"
+              src={ MenuFechado}
+              alt="Menu"
+            />
+          </button>
+        <div className="flex flex-col gap-8 text-xl">
+          <NavLink onClick={alternarMenu} to="/">Home</NavLink>
+          <NavLink onClick={alternarMenu} to="/qrCode">Qr-code</NavLink>
+          <NavLink onClick={alternarMenu} to="/cardapioDigital">Cardápio Digital</NavLink>
+
+          <Botao path="/login" variant="secundario" text="Login" />
+        </div>
+        </div>
+      </div>
+    </header>
+  );
 }
 
 export default Nav
