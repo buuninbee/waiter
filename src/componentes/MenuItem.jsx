@@ -22,13 +22,12 @@ function MenuItem({ item }) {
           alt={item.titulo}
           className="min-w-[300px] min-h-[300px] rounded-md m-auto"
         />
-
         </div>
   
         <div>
-          <div className="flex items-center justify-between">
-            <h3 className="text-xl font-semibold">{item.titulo}</h3>
-            <p className="text-xl font-bold text-(--primario-900)">R$ {item.preco}</p>
+          <div className="flex flex-col gap-2 text-(--primario-900) justify-between">
+            <h3 className="text-lg font-semibold">{item.titulo}</h3>
+            <p className="text-base font-bold ">R$ {item.preco}</p>
           </div>
           {item.descricao && (
             <p className="text-gray-600 text-sm">{item.descricao}</p>
