@@ -5,13 +5,12 @@ import CardapioContext from '@/context/CardapioContext';
 import  {useState, useContext} from "react"
 
 import seta from "@/assets/seta.svg"
+import DialogoWhatsApp from './DialogoWhatsApp';
 
 function CarrinhoCompra() {
-  const {cartItens} = useContext(CardapioContext)
+  const {cartItens, totalPreco} = useContext(CardapioContext)
 
-  const precos = cartItens.map((produto) => produto.preco)
 
-  const totalPreco = precos.reduce((acc, item) => (item + acc), 0).toFixed(2)
   const [aberto, setAberto] = useState(false)
 
   return (
@@ -22,7 +21,10 @@ function CarrinhoCompra() {
               <img src={iconSacola} alt="" />
               <p className='bg-(--terciario-300) text-sm text-(--primario-800) rounded-full px-2 absolute left-4 border border-(--primario-800) bottom-4'>{cartItens.length}</p>
           </div>
-          <h3>Faça seu pedido</h3>
+          <div className='px-1'>
+            <h3>Faça seu pedido</h3>
+            <p className='text-[12px]'>Enviaremos seu pedido para o seu WhatsApp</p>
+          </div>
          </div>
          <div>
          <img
@@ -44,16 +46,19 @@ function CarrinhoCompra() {
       </div>
     <div className={aberto ? "grid" : "hidden "}>
       {
-        cartItens.length > 0 ? <CarrinhoItem/> : <p className='text-center text-xl py-4 text-(--terciario-200)'>Seu carrinho está vazio, adicione um produto</p>
-      }
-
+        cartItens.length > 0 ? 
+        <>
+        <CarrinhoItem/> 
         <div className='pb-8'>
           <div className='flex text-(--terciario-50) justify-between py-4'>
             <p>Resumo do carrinho</p>
             <span>R$ {totalPreco}</span>
           </div>
-           <button className='bg-(--terciario-100) w-full text-(--primario-700) border border-(--primario700) hover:bg-(--terciario-200) hover:text-(--primario-500) py-2 px-4 text-lg rounded-sm md:text-xl'>Adicionar a comando</button>
+          <DialogoWhatsApp/>
         </div>
+        </>
+        : <p className='text-center text-xl pt-4 pb-14 text-(--terciario-200)'>Seu carrinho está vazio, adicione um produto</p>
+      }
     </div>
     </div>
   )
