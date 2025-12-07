@@ -36,7 +36,7 @@ const DialogoChamaAtendente = () => {
          </DialogTrigger>
           <DialogContent>
             <DialogHeader className='text-left'>
-                <DialogTitle className=' text-xl mb-4 text-(--primario-800) text-center md:text-2xl'>Chamar atendetende do restaurante do chicó</DialogTitle>
+                <DialogTitle className=' text-xl mb-4 text-(--primario-800) text-center md:text-2xl'>Chamar atendetende do restaurante do Sr. Chicó</DialogTitle>
 
                 <div>
                     <form className="grid gap-2.5">
@@ -53,7 +53,7 @@ const DialogoChamaAtendente = () => {
                                 {
                                     opcoes.map((opcao, index) => {
                                         return(
-                                            <li id={index + 1} className="flex gap-2.5">
+                                            <li key={index} id={index + 1} className="flex gap-2.5">
                                                 <input type="radio" name={opcao.name} id={opcao.htmlFor} />
                                                 <label htmlFor={opcao.htmlFor}>{opcao.label}</label>
                                             </li>
