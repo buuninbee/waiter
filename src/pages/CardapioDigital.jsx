@@ -5,7 +5,7 @@ import linkQr from "@/assets/qrcode_waiterg.vercel.app.png"
 
 const CardapioDigital = () =>{
   return (
-    <main className='grid pb-8 pt-30'>
+    <main className='grid pb-8 pt-20'>
         <section className='px-8 py-6  md:py-7 lg:pt-11'>
         <div className='grid text-center max-w-[1100px] justify-self-center  text-(--primario-700) gap-3.5 md:gap-2 lg:gap-4'>
           <h1 className='text-xl font-medium sm:text-2xl md:text-3xl lg:text-4xl'>Veja como seu cadárpio vai aparecer</h1>
