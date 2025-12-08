@@ -293,12 +293,11 @@ export default function ModoGarcom() {
           return (
             <div
               key={item.id}
-              className="rounded-xl bg-(--terciario-500) p-4 shadow transition hover:bg-zinc-800"
+              className="rounded-xl bg-(--terciario-500) p-4 shadow transition"
             >
-              <div className="mb-3 flex items-center justify-between">
-                <span className="text-sm text-zinc-900">{item.nome}</span>
+              <div className="mb-3 flex flex-col gap-1 justify-between">
                 <span
-                  className={`rounded px-2 py-1 text-xs font-semibold ${
+                  className={`rounded px-2 py-1 max-w-max text-sm font-semibold ${
                     item.status === "Aberta"
                       ? "bg-(--primario-700)"
                       : "bg-zinc-600"
@@ -306,18 +305,19 @@ export default function ModoGarcom() {
                 >
                   {item.status}
                 </span>
+                <span className="text-lg font-bold text-zinc-900">{item.nome}</span>
               </div>
 
               <p className="text-lg text-(--primario-800) font-semibold">{item.cliente}</p>
 
-              <p className="mt-2 text-sm text-zinc-400">Total</p>
+              <p className="mt-2 text-sm text-zinc-800">Total</p>
               <p className="text-xl font-bold text-(--primario-500)">
                 R$ {total.toFixed(2)}
               </p>
 
               <button
                 onClick={() => setComandaSelecionada(item)}
-                className="mt-4 w-full rounded bg-(--primario-800) py-2 text-sm font-semibold hover:bg-green-500"
+                className="mt-4 w-full rounded bg-(--primario-800) py-2 text-sm font-semibold"
               >
                 Ver Pedido
               </button>
