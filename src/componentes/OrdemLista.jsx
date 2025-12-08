@@ -26,6 +26,69 @@ const OrdemLista = () => {
       pagamento: "PIX",
       status: "Producao",
     },
+    {
+      id: 8,
+      horario: "12:42",
+      mesa: 5,
+      pagamento: "Não registrado",
+      status: "Producao",
+    },
+    {
+      id: 9,
+      horario: "12:46",
+      mesa: 8,
+      pagamento: "PIX",
+      status: "Producao",
+    },
+    {
+      id: 10,
+      horario: "13:42",
+      mesa: 10,
+      pagamento: "Não registrado",
+      status: "Producao",
+    },
+    {
+      id: 13,
+      horario: "12:49",
+      mesa: 8,
+      pagamento: "PIX",
+      status: "Analise",
+    },
+    {
+      id: 16,
+      horario: "12:52",
+      mesa: 8,
+      pagamento: "PIX",
+      status: "Analise",
+    },
+    {
+      id: 18,
+      horario: "12:46",
+      mesa: 8,
+      pagamento: "PIX",
+      status: "Pronto",
+    },
+    {
+      id: 19,
+      horario: "13:42",
+      mesa: 10,
+      pagamento: "Não registrado",
+      status: "Pronto",
+    },
+    {
+      id: 17,
+      horario: "12:49",
+      mesa: 8,
+      pagamento: "PIX",
+      status: "Pronto",
+    },
+    {
+      id: 20,
+      horario: "12:52",
+      mesa: 8,
+      pagamento: "PIX",
+      status: "Producao",
+    },
   ]);
 
   const [statusAtivo, setStatusAtivo] = React.useState("Analise");
@@ -63,7 +126,7 @@ const OrdemLista = () => {
       {pedido.status !== "Pronto" && (
         <button
           onClick={() => avancarStatus(pedido.id)}
-          className="bg-(--primario-700) rounded-lg text-(--terciario-100) py-2 px-1.5"
+          className="bg-(--primario-700) cursor-pointer rounded-lg text-(--terciario-100) py-2 px-1.5"
         >
           Avançar
         </button>
