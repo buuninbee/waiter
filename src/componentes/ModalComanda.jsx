@@ -14,7 +14,7 @@ export default function ModalComanda({ comanda, onClose }) {
             <button onClick={onClose}>✖</button>
           </div>
   
-          <p className="mb-4 text-sm text-zinc-400">
+          <p className="mb-4 text-lg font-bold text-(--terciario-50)">
             Cliente: {comanda.cliente}
           </p>
   
