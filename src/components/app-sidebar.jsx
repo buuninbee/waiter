@@ -66,11 +66,7 @@ const data = {
       items: [
         {
           title: "Usuários",
-          url: "#",
-        },
-        {
-          title: "Cadastrar usuário",
-          url: "#",
+          url: "adm/cadastrar-usuario",
         },
         {
           title: "Dashbord de vendas",

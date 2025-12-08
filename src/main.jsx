@@ -21,6 +21,7 @@ import Provider from './context/Provider'
 import CadastrarProduto from '@/pages/adm/CadastrarProduto'
 import OrdemServico from '@/pages/adm/OrdemServico'
 import ModoGarcom from './pages/ModoGarcom'
+import CadastrarUsuario from './pages/adm/CadastrarUsuarios'
 
 
 
@@ -46,6 +47,7 @@ createRoot(document.getElementById('root')).render(
               <Route path='adm/cardapio' element={<Cardapio/>}/>
               <Route path='adm/dashboard-produtos' element={<DashboardProdutos/>}/>
               <Route path='adm/cadastrar-produtos' element={<CadastrarProduto/>}/>
+              <Route path='adm/cadastrar-usuario' element={<CadastrarUsuario/>}/>
               <Route path='adm/ordem-servico' element={<OrdemServico />}/>
             </Route>
               <Route path='/cardapio-template' element={<CardapioTemplate/>}/>
