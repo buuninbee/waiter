@@ -76,7 +76,7 @@ const CadastrarProduto = () => {
     <div  className="grid pb-8 max-w-[1500px md:pb-0" >
          <Card className='bg-(--primario-900) '>
           <CardHeader>
-            <CardTitle className='text-(--terciario-300) lg:text-2xl'>Ordem de serviço</CardTitle>
+            <CardTitle className='text-(--terciario-300) lg:text-2xl'>Lista de Produtos</CardTitle>
           </CardHeader>
           <CardContent>
             <Table>
