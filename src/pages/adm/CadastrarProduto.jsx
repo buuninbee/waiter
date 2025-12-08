@@ -28,7 +28,14 @@ const CadastrarProduto = () => {
     { codigo: 12, denominacao: "Milkshake de Chocolate", status: "ativo", preco: 18.90, categoria: "Bebidas" },
     { codigo: 13, denominacao: "Espetinho de Frango", status: "ativo", preco: 8.90, categoria: "Petiscos" },
     { codigo: 14, denominacao: "Suco de Maracujá", status: "ativo", preco: 9.50, categoria: "Bebidas" },
-    { codigo: 15, denominacao: "Picanha na Chapa", status: "ativo", preco: 69.90, categoria: "Pratos" }
+    { codigo: 15, denominacao: "Picanha na Chapa", status: "ativo", preco: 69.90, categoria: "Pratos" },
+    { codigo: 16, denominacao: "Coca-Cola Lata", status: "ativo", preco: 6.50, categoria: "Bebidas" },
+    { codigo: 17, denominacao: "Pizza Calabresa", status: "ativo", preco: 49.90, categoria: "Lanches" },
+    { codigo: 18, denominacao: "Lasanha à Bolonhesa", status: "ativo", preco: 29.90, categoria: "Pratos" },
+    { codigo: 19, denominacao: "Suco Natural de Laranja", status: "ativo", preco: 9.90, categoria: "Bebidas" },
+    { codigo: 20, denominacao: "Pastel de Carne", status: "ativo", preco: 7.00, categoria: "Petiscos" },
+    { codigo: 21, denominacao: "Café Expresso", status: "ativo", preco: 5.00, categoria: "Bebidas" },
+    { codigo: 22, denominacao: "Torta de Limão", status: "ativo", preco: 14.90, categoria: "Sobremesas" },
   ];
   
    console.log(categoriaSelecionada)
