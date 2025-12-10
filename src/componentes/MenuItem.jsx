@@ -20,7 +20,7 @@ function MenuItem({ item }) {
         <img
           src={item.imagem || fotocarda}
           alt={item.titulo}
-          className="min-w-[300px] min-h-[300px] rounded-md m-auto"
+          className="min-w-60 min-h-[300px] rounded-md m-auto"
         />
         </div>
   
