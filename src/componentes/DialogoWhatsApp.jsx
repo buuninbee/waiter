@@ -68,7 +68,7 @@ ${itensFormatados}
       const response = await fetch('https://v2-api.gzappy.com/message/send-text', {
         method: 'POST',
         headers: {
-          Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwdWJsaWNfaW5zdGFuY2VfaWQiOiJYWjZPMyoqKioqKioqKioqKioqUFUzS0YiLCJleHBpcmVzX2F0IjoiMjAyNi0xMi0wN1QwMDozMDoyNC41NDFaIiwiaWF0IjoxNzY1MDY3NDI0LCJleHAiOjIzNjk4Njc0MjR9.4FoEqv4S6by1v4aQ864ytdgfrTi_TuBE9o3OGR1v5Lg",
+          Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwdWJsaWNfaW5zdGFuY2VfaWQiOiJQR0w0SSoqKioqKioqKioqKioqS01PVU8iLCJleHBpcmVzX2F0IjoiMjAyNi0xMi0xMFQxNDoyMTowOS4zMThaIiwiaWF0IjoxNzY1Mzc2NDY5LCJleHAiOjIzNzAxNzY0Njl9.Yx_dWl9wn2-QVRmrYh-GCWuQh6v4HmS2xLDb5yh_LZ0",
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
