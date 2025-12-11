@@ -1,4 +1,4 @@
-import { Store } from 'lucide-react';
+import { Store, OctagonAlert, LogOut, Table } from 'lucide-react';
 import MenuAberto from "../assets/menu-aberto.svg"
 import MenuFechado from "../assets/menu-fechado.svg"
 import {  NavLink } from "react-router-dom"
@@ -7,9 +7,6 @@ import addCategoria from "@/assets/icon-adicionar.svg"
 import { useState } from "react";
 import ModalComanda from "@/componentes/ModalComanda";
 
-import {
-  LogOut,
-} from "lucide-react"
 
 
 export default function ModoGarcom() {
@@ -240,6 +237,18 @@ export default function ModoGarcom() {
               alt="Menu"
             />
           </button>
+
+          <div className='grid gap-6 py-10 pb-60'>
+                <NavLink to="/modo-garcom" className='flex text-sm gap-2 items-center'>
+                    <Table />
+                    <p>Mapa das mesas</p>
+                </NavLink>
+                <NavLink to="/chamados-clientes" className='flex text-sm gap-2 items-center'>
+                    <OctagonAlert />
+                    <p>Chamados dos clientes</p>
+                </NavLink>
+            </div>
+
           <div className="flex flex-col gap-8 text-xl">
             <div className="flex gap-2 items-center pt-6">
                 <Store className='bg-(--terciario-200) w-10 h-7 rounded-lg text-(--primario-800)' />
@@ -248,6 +257,7 @@ export default function ModoGarcom() {
                 <h3 className='text-sm'>Loja do Sr. Chicó</h3>
               </div>
             </div>
+
             <div className=" flex gap-3 items-center justify-center py-2 px-1 rounded-lg bg-(--terciario-300) text-(--secundario-900) cursor-pointer">
               <LogOut className="text-(--secundario-900)" />
               Sair
