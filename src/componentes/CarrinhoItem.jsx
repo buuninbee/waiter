@@ -22,7 +22,7 @@ const CarrinhoItem = () => {
             return (
               <div
                 key={item.id}
-                className='grid gap-2 max-h-[180px] border border-amber-50 rounded-xl py-2 px-3.5'
+                className='grid gap-2 max-h-[140px] border border-amber-50 rounded-xl py-2 px-3.5'
               >
                 <div className='flex h-auto justify-between gap-2 text-(--terciario-200)'>
                   <div className='grid grid-cols-1 gap-1'>
