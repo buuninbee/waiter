@@ -8,6 +8,9 @@ import {
 } from "@/components/ui/dialog"
 import Seletor from "./Seletor"
 import iconChamarAtendente from '@/assets/icon-chamar-atendente.svg'
+import { useState } from "react"
+
+import { toast, Toaster } from "sonner"
 
 const opcoes = [
     {
@@ -28,8 +31,11 @@ const opcoes = [
 ]
 
 const DialogoChamaAtendente = () => {
+
+  const [open, setOpen] = useState(false);
+
     return (
-        <Dialog>
+        <Dialog  open={open} onOpenChange={setOpen}>
           <DialogTrigger className='flex items-center gap-2 bg-(--primario-800) text-(--terciario-400) cursor-pointer hover:bg-(--primario-800) py-2 px-4 rounded-lg text-sn'>
             <img className="w-5" src={iconChamarAtendente} alt="" />
                 Chamar atendente
@@ -38,6 +44,7 @@ const DialogoChamaAtendente = () => {
             <DialogHeader className='text-left'>
                 <DialogTitle className=' text-xl mb-4 text-(--primario-800) text-center md:text-2xl'>Chamar atendetende do restaurante do Sr. Chicó</DialogTitle>
 
+                <Toaster richColors position="top-right" />
                 <div>
                     <form className="grid gap-2.5">
                         <div className="grid gap-2">
@@ -62,7 +69,11 @@ const DialogoChamaAtendente = () => {
                                 }
                             </ul>
                         </div>
-                        <button className='bg-(--primario-800) text-(--terciario-300) py-1.5 px-2 rounded-sm'>Chamar o atendente</button>
+                        <button
+                        onClick={() => toast.success("Garçom chamado, aguarde alguns segundos!", {
+                            description: " Por favor, aguarde",
+                          })}
+                        className='bg-(--primario-800) text-(--terciario-300) py-1.5 px-2 rounded-sm'>Chamar o atendente</button>
                     </form>
                 </div>
             </DialogHeader>
